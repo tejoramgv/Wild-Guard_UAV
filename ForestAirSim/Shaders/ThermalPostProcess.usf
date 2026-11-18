@@ -1,0 +1,19 @@
+// Optional radiometric-style thermal post-process material for UE 4.27.
+// Reads the CustomDepth stencil assigned by configure_segmentation_ids.py and
+// maps warm actors to a hot colour ramp over a cold background.
+//
+// This is a *simulated* thermal rendering, not measured radiometry. The
+// primary thermal path is AirSim ImageType 7 (Infrared, object-ID greyscale);
+// this material is for a separate SceneCapture2D if a colour ramp is desired.
+
+float3 ThermalRamp(float stencil)
+{
+    float t = saturate(stencil / 255.0);
+    float3 cold = float3(0.02, 0.02, 0.06);
+    float3 warm = float3(0.75, 0.08, 0.02);
+    float3 hot  = float3(1.0, 0.95, 0.65);
+    float3 colour = (t < 0.6) ? lerp(cold, warm, t / 0.6)
+                              : lerp(warm, hot, (t - 0.6) / 0.4);
+    // Keep the environment dark so warm bodies stand out.
+    return (t < 0.02) ? cold : colour;
+}

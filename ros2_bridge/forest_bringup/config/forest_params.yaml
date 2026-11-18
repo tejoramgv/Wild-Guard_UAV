@@ -1,0 +1,102 @@
+# ForestAirSim ROS 2 parameters. Per-node sections are selected by node name.
+forest_bridge:
+  ros__parameters:
+    vehicle_name: ForestDrone
+    rgb_camera: front_center
+    thermal_camera: thermal
+    depth_camera: front_center
+    img_width: 640
+    img_height: 480
+    hfov_deg: 60.0
+    camera_pitch_deg: -11.5
+
+flight_executor:
+  ros__parameters:
+    vehicle_name: ForestDrone
+    hover_alt: 3.0
+    ground_z: 0.0
+    max_speed: 2.0
+    max_vertical_speed: 1.5
+    max_yaw_rate: 1.2
+    max_acceleration: 2.5
+    max_altitude: 25.0
+    min_altitude: 0.3
+    cmd_timeout: 0.5
+    heartbeat_timeout: 2.0
+    control_rate_hz: 20.0
+
+keyboard_teleop:
+  ros__parameters:
+    max_speed: 2.0
+    max_vertical_speed: 1.5
+    max_yaw_rate: 1.2
+    input_backend: pynput
+    pulse_seconds: 0.25
+    publish_rate_hz: 20.0
+    enabled: true
+
+obstacle_avoidance:
+  ros__parameters:
+    min_safe_distance: 2.0
+    emergency_stop_distance: 0.9
+    detection_range: 8.0
+    max_turn_rate: 1.0
+    avoidance_speed: 1.0
+    replan_period: 0.1
+    commit_time: 0.6
+    side_hysteresis_ratio: 1.25
+    num_sectors: 7
+    vertical_fraction: 0.5
+    min_valid_depth: 0.05
+    use_lidar: false
+    lidar_topic: /airsim_node/ForestDrone/lidar/LidarSensor
+    depth_timeout: 0.5
+    max_speed: 2.0
+
+yolo_detection:
+  ros__parameters:
+    rgb_topic: /drone/camera/rgb/image_raw
+    thermal_topic: /drone/camera/thermal/image_raw
+    model_rgb: yolov8n.pt
+    model_thermal: ""
+    confidence: 0.35
+    iou: 0.45
+    device: cpu
+    rate_hz: 2.0
+    max_det: 50
+    allowed_classes: ""
+    class_map: "{}"
+    thermal_enabled: true
+    save_images: false
+    image_dir: detections_images
+
+target_localization:
+  ros__parameters:
+    img_width: 640
+    img_height: 480
+    hfov_deg: 60.0
+    camera_pitch_deg: -11.5
+    depth_is_perspective: false
+    max_time_delta: 0.15
+    min_iou: 0.2
+    dedup_radius: 1.5
+    dedup_seconds: 5.0
+    allow_ground_fallback: true
+    ground_z: 0.0
+    rate_hz: 10.0
+
+detection_database:
+  ros__parameters:
+    db_path: detections.sqlite3
+    csv_path: detections.csv
+    dedup_radius: 1.5
+    dedup_seconds: 5.0
+    log_period: 10.0
+
+visibility_check:
+  ros__parameters:
+    min_mean: 15.0
+    expected_width: 640
+    expected_height: 480
+    report_period: 3.0
+    duplicate_tolerance: 1.0

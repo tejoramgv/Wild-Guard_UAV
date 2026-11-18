@@ -1,0 +1,184 @@
+{
+  "profile": "dense",
+  "seed": 7,
+  "world": [
+    180.0,
+    180.0
+  ],
+  "total_actors": 1700,
+  "total_vegetation": 7100,
+  "tree_count": 1400,
+  "by_class": {
+    "oak": {
+      "count": 420,
+      "min_dist": 3.201,
+      "required": 3.2,
+      "ok": true
+    },
+    "pine": {
+      "count": 520,
+      "min_dist": 2.812,
+      "required": 2.8,
+      "ok": true
+    },
+    "birch": {
+      "count": 300,
+      "min_dist": 2.605,
+      "required": 2.6,
+      "ok": true
+    },
+    "tropical": {
+      "count": 160,
+      "min_dist": 3.021,
+      "required": 3.0,
+      "ok": true
+    },
+    "grass": {
+      "count": 5000,
+      "min_dist": 0.0,
+      "required": 0.0,
+      "ok": true
+    },
+    "bush": {
+      "count": 1200,
+      "min_dist": 1.512,
+      "required": 1.5,
+      "ok": true
+    },
+    "fern": {
+      "count": 900,
+      "min_dist": 0.838,
+      "required": 0.8,
+      "ok": true
+    },
+    "rock": {
+      "count": 90,
+      "min_dist": 4.116,
+      "required": 4.0,
+      "ok": true
+    },
+    "fallen_log": {
+      "count": 45,
+      "min_dist": 5.371,
+      "required": 5.0,
+      "ok": true
+    },
+    "human": {
+      "count": 40,
+      "min_dist": 0.693,
+      "required": 0.6,
+      "ok": true
+    },
+    "deer": {
+      "count": 25,
+      "min_dist": 3.53,
+      "required": 3.0,
+      "ok": true
+    },
+    "boar": {
+      "count": 15,
+      "min_dist": 3.324,
+      "required": 3.0,
+      "ok": true
+    },
+    "elephant": {
+      "count": 5,
+      "min_dist": Infinity,
+      "required": 6.0,
+      "ok": true
+    },
+    "monkey": {
+      "count": 30,
+      "min_dist": 2.061,
+      "required": 2.0,
+      "ok": true
+    },
+    "bird": {
+      "count": 25,
+      "min_dist": 4.129,
+      "required": 4.0,
+      "ok": true
+    },
+    "fox": {
+      "count": 10,
+      "min_dist": 4.217,
+      "required": 4.0,
+      "ok": true
+    },
+    "rabbit": {
+      "count": 15,
+      "min_dist": 4.121,
+      "required": 4.0,
+      "ok": true
+    }
+  },
+  "min_spacing_ok": true,
+  "min_dist": {
+    "oak": 3.201,
+    "pine": 2.812,
+    "birch": 2.605,
+    "tropical": 3.021,
+    "rock": 4.116,
+    "fallen_log": 5.371,
+    "grass": 0.0,
+    "bush": 1.512,
+    "fern": 0.838,
+    "human": 0.693,
+    "deer": 3.53,
+    "boar": 3.324,
+    "elephant": Infinity,
+    "monkey": 2.061,
+    "bird": 4.129,
+    "fox": 4.217,
+    "rabbit": 4.121
+  },
+  "elevation_min": -4.933,
+  "elevation_max": 4.643,
+  "open_bowls": [
+    [
+      [
+        0,
+        0
+      ],
+      10.0
+    ],
+    [
+      [
+        55,
+        -45
+      ],
+      9.0
+    ],
+    [
+      [
+        -60,
+        50
+      ],
+      8.0
+    ]
+  ],
+  "corridors": [
+    [
+      [
+        0,
+        -90
+      ],
+      [
+        0,
+        90
+      ],
+      5.0
+    ],
+    [
+      [
+        -90,
+        10
+      ],
+      [
+        90,
+        10
+      ],
+      4.0
+    ]
+  ]
+}

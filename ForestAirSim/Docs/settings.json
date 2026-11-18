@@ -1,0 +1,85 @@
+{
+  "SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/main/docs/settings.md",
+  "SettingsVersion": 1.2,
+  "SimMode": "Multirotor",
+  "ClockSpeed": 1,
+  "LocalHostIp": "192.168.1.100",
+  "ApiServerPort": 41451,
+  "ViewMode": "FlyWithMe",
+  "OriginGeopoint": {
+    "Latitude": 47.641468,
+    "Longitude": -122.140165,
+    "Altitude": 122
+  },
+  "SegmentationSettings": {
+    "InitMethod": "None",
+    "MeshNamingMethod": "StaticMeshName",
+    "OverrideExisting": true
+  },
+  "Vehicles": {
+    "ForestDrone": {
+      "VehicleType": "SimpleFlight",
+      "DefaultVehicleState": "Armed",
+      "AutoCreate": true,
+      "EnableCollisions": true,
+      "AllowAPIAlways": true,
+      "EnableTrace": false,
+      "X": 0,
+      "Y": 0,
+      "Z": -2,
+      "Yaw": 0,
+      "Cameras": {
+        "front-center": {
+          "CaptureSettings": [
+            {
+              "ImageType": 0,
+              "Width": 640,
+              "Height": 480,
+              "FOV_Degrees": 60,
+              "AutoExposureSpeed": 100,
+              "AutoExposureBias": 0,
+              "MotionBlurAmount": 0,
+              "TargetGamma": 1.0
+            },
+            {
+              "ImageType": 1,
+              "Width": 640,
+              "Height": 480,
+              "FOV_Degrees": 60,
+              "AutoExposureSpeed": 100,
+              "AutoExposureBias": 0,
+              "MotionBlurAmount": 0,
+              "TargetGamma": 1.0
+            }
+          ],
+          "X": 0.3,
+          "Y": 0.0,
+          "Z": -0.1,
+          "Pitch": -11.5,
+          "Roll": 0.0,
+          "Yaw": 0.0
+        },
+        "thermal": {
+          "CaptureSettings": [
+            {
+              "ImageType": 7,
+              "Width": 640,
+              "Height": 480,
+              "FOV_Degrees": 60,
+              "AutoExposureSpeed": 100,
+              "AutoExposureBias": 0,
+              "MotionBlurAmount": 0,
+              "TargetGamma": 1.0
+            }
+          ],
+          "X": 0.3,
+          "Y": 0.0,
+          "Z": -0.1,
+          "Pitch": -11.5,
+          "Roll": 0.0,
+          "Yaw": 0.0
+        }
+      }
+    }
+  }
+}

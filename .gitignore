@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ROS/colcon build trees
+.verify_ws/
+build/
+install/
+log/
+
+# Local tool state
+.commandcode/
+.vscode/
+.idea/
+
+# Runtime data
+detections.sqlite3
+*.sqlite3
+detections.csv
+
+# Generated/analysis documentation (keep only the root README)
+/*.md
+!README.md
+ForestAirSim/Docs/*.md
+Unreal/**/*.md

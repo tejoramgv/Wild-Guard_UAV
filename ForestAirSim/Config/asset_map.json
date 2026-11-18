@@ -1,0 +1,122 @@
+{
+  "_notes": [
+    "Fill every path with a real UE 4.27 asset. Empty paths are skipped by ue_place_actors.py; no placeholder cubes are ever spawned.",
+    "Static meshes: /Game/ForestEnvironment/.../SM_Asset. Blueprint actors (humans/animals with AnimBP): set spawn_as='actor' and path to the Blueprint asset (without _C).",
+    "reference_height_m is the asset's native height in metres; the generator writes scale = target_height / reference_height_m.",
+    "For AirSim Infrared thermal proxy, name warm-actor meshes with the species word (e.g. SK_Human_Male, SK_Deer) so configure_segmentation_ids.py can match them by StaticMeshName."
+  ],
+  "classes": {
+    "oak": {
+      "path": "",
+      "reference_height_m": 10.0,
+      "spawn_as": "static_mesh",
+      "z_offset_cm": 0.0
+    },
+    "pine": {
+      "path": "",
+      "reference_height_m": 10.0,
+      "spawn_as": "static_mesh",
+      "z_offset_cm": 0.0
+    },
+    "birch": {
+      "path": "",
+      "reference_height_m": 10.0,
+      "spawn_as": "static_mesh",
+      "z_offset_cm": 0.0
+    },
+    "tropical": {
+      "path": "",
+      "reference_height_m": 10.0,
+      "spawn_as": "static_mesh",
+      "z_offset_cm": 0.0
+    },
+    "grass": {
+      "path": "",
+      "reference_height_m": 0.4,
+      "spawn_as": "static_mesh",
+      "z_offset_cm": 0.0
+    },
+    "bush": {
+      "path": "",
+      "reference_height_m": 1.0,
+      "spawn_as": "static_mesh",
+      "z_offset_cm": 0.0
+    },
+    "fern": {
+      "path": "",
+      "reference_height_m": 0.5,
+      "spawn_as": "static_mesh",
+      "z_offset_cm": 0.0
+    },
+    "rock": {
+      "path": "",
+      "reference_height_m": 1.0,
+      "spawn_as": "static_mesh",
+      "z_offset_cm": 0.0
+    },
+    "fallen_log": {
+      "path": "",
+      "reference_height_m": 1.0,
+      "spawn_as": "static_mesh",
+      "z_offset_cm": 0.0
+    },
+    "human": {
+      "path": "",
+      "reference_height_m": 1.75,
+      "spawn_as": "actor",
+      "z_offset_cm": 0.0
+    },
+    "deer": {
+      "path": "",
+      "reference_height_m": 1.35,
+      "spawn_as": "actor",
+      "z_offset_cm": 0.0
+    },
+    "boar": {
+      "path": "",
+      "reference_height_m": 0.8,
+      "spawn_as": "actor",
+      "z_offset_cm": 0.0
+    },
+    "elephant": {
+      "path": "",
+      "reference_height_m": 3.0,
+      "spawn_as": "actor",
+      "z_offset_cm": 0.0
+    },
+    "monkey": {
+      "path": "",
+      "reference_height_m": 0.55,
+      "spawn_as": "actor",
+      "z_offset_cm": 0.0
+    },
+    "bird": {
+      "path": "",
+      "reference_height_m": 0.3,
+      "spawn_as": "actor",
+      "z_offset_cm": 0.0
+    },
+    "fox": {
+      "path": "",
+      "reference_height_m": 0.5,
+      "spawn_as": "actor",
+      "z_offset_cm": 0.0
+    },
+    "rabbit": {
+      "path": "",
+      "reference_height_m": 0.3,
+      "spawn_as": "actor",
+      "z_offset_cm": 0.0
+    }
+  },
+  "segmentation": {
+    "human": 250,
+    "deer": 240,
+    "boar": 230,
+    "elephant": 220,
+    "monkey": 210,
+    "bird": 200,
+    "fox": 195,
+    "rabbit": 190
+  }
+}

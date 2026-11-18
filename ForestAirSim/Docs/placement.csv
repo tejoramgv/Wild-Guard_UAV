@@ -1,0 +1,20 @@
+id,class,count_target,zone,placement_rule,scale_m,collision,animation_v1,notes
+T-OAK-01,oak,420,mixed + isolated,seeded scatter min spacing 3.2m; density mask creates irregular clearings,12-20h canopy,capsule trunk BlockAll,static,LOD2+ cull 150m
+T-PINE-01,pine,520,north half + sparse,seeded scatter min spacing 2.8m,14-24h,capsule trunk BlockAll,static,LOD2+ cull 150m
+T-BIRCH-01,birch,300,south-east,seeded scatter min spacing 2.6m,10-16h,capsule trunk BlockAll,static,LOD2+ cull 150m
+T-TROP-01,tropical,160,west,seeded scatter min spacing 3.0m,12-22h,capsule trunk BlockAll,static,LOD2+ cull 150m
+V-GRASS-01,grass,5000,all zones except paths/open centers,blue-noise scatter; instanced at import,0.2-0.5h,no collision,static wind,instanced
+V-BUSH-01,bush,1200,edges of paths + under trees,seeded scatter min 1.5m,0.5-1.2h,large only BlockAll,static,instanced
+V-FERN-01,fern,900,shaded tree bases,seeded scatter min 0.8m,0.3-0.6h,none,static,instanced
+R-ROCK-01,rock,90,open edges + mid forest,min spacing 4m,0.4-1.5 dia,BlockAll simple box,static,
+R-LOG-01,fallen_log,45,mid forest,min spacing 5m,1-3m length,capsule,static,
+H-HUMAN-01,human,40,paths/open groups/near trees,groups 1-4 min 0.6m apart snap-to-floor,1.6-1.85h,capsule BlockAll,static/wander/path,animated BP recommended
+A-DEER-01,deer,25,near trees + open edges,groups 1-3 min 3m,1.2-1.5h,capsule where needed,static/wander/path,varied yaw + deterministic motion
+A-BOAR-01,boar,15,near bushes + path edge,groups 1-2 min 3m,0.7-0.9h,capsule,static/wander,
+A-ELE-01,elephant,5,large clearing west,min 6m apart,2.8-3.2h,capsule BlockAll,static/wander/path,
+A-MONK-01,monkey,30,trees cluster B + logs,groups 2-4 min 2m,0.4-0.7h,capsule off if in tree,static/wander/path,
+A-BIRD-01,bird,25,above clearings + perched,air 5-10m AGL + perched min 4m,0.2-0.4 wingspan,none,perched/wander_air,
+A-FOX-01,fox,10,path edges + sparse zone,groups 1-2 min 4m,0.4-0.55h,capsule,static/wander,
+A-RAB-01,rabbit,15,grass near bushes,groups 1-2 min 4m,0.25-0.35h,none/small,static/wander,
+PATH-01,path spline,3 loops,main N-S + E-W + clearing ring,dirt layer width 1.5m,flat,walkable,static,humans walk along paths
+OPEN-01,flight bowl,3,"origin 10m, east 9m, west 8m",no trunks; corridors 4-5m wide,flat,none,static,PlayerStart + spawn here

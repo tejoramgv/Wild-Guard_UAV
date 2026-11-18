@@ -1,0 +1,16 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "4.27",
+  "Category": "Samples",
+  "Description": "ForestAirSim - Microsoft AirSim forest drone environment (dense procedural forest, RGB/thermal cameras). Blueprint-only project; AirSim is enabled as a plugin.",
+  "Modules": [],
+  "TargetPlatforms": [
+    "WindowsNoEditor"
+  ],
+  "Plugins": [
+    {
+      "Name": "AirSim",
+      "Enabled": true
+    }
+  ]
+}

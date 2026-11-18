@@ -1,0 +1,8 @@
+# Python dependencies for the Linux ROS 2 side.
+# ROS 2 itself (rclpy, message packages, colcon) comes from the ROS distro.
+numpy>=1.24
+opencv-contrib-python>=4.8
+ultralytics>=8.0        # YOLO inference (pulls torch)
+pynput>=1.7             # true key press/release events for keyboard teleop
+pyyaml>=6.0
+pytest>=7.0
